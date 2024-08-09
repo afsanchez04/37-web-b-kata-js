@@ -102,12 +102,15 @@ if (edad >= 25) {
 
 //Solución 4:
 
-/* var nombre = prompt("¿Cuál es tu nombre?");
+/* var nombre = prompt("¿Cuál es tu nombre?").toLowerCase();
 var edad = prompt("¿Cuál es tu edad?");
 
+nombre =  nombre.normalize('NFD').replace(/[\u0300-\u036f]/g,"");
 edad = Number(edad);
 
-if (edad >= 25 && nombre === "Chenchis" || nombre === "María") {
+console.log(nombre)
+
+if (edad >= 25 && ( nombre === "chenchis" || nombre === "maria") ) {
     console.log(nombre + ", puedes ingresar a la zona VIP.");
 } else if (edad >= 25) {
     console.log(nombre + ", puedes ingresar a la discoteca.");
