@@ -95,25 +95,19 @@ const passName = document.querySelector('#password')
 //2. Funciones
 function validarUser (e){
     e.preventDefault()
-    cuentas.forEach( user => {
-        let validacionUser = userName.value.toLowerCase() === user.nombre.toLowerCase()
-        let validacionPass = passName.value == user.pass
 
-        console.log(typeof user.pass)
-        console.log(typeof passName.value)
+    for (let i = 0; i < cuentas.length; i++) {
+        let user = cuentas[i];
+        let validacionUser = userName.value.toLowerCase() === user.nombre.toLowerCase();
+        let validacionPass = passName.value == user.pass;
 
-        if(validacionUser && validacionPass){
-            console.log(`Bienvenido ${user.nombre}`)  
-            return
-        }else{
-            console.log(`Datos incorrectos ✖️`)
-            return
+        if (validacionUser && validacionPass) {
+            console.log(`Bienvenido ${user.nombre}`);
+            return;  // Sale de la función validarUser
         }
-        
-    } )
+    }
     
-    
-
+    console.log(`Datos incorrectos ✖️`);
         
 }
 
