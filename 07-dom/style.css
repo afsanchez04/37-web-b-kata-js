@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pista{
+    width: 100%;
+    height: 200px;
+    background-color: #232323;
+    padding: 10px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+
+.pelota{
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    border-radius: 50%;
+}
